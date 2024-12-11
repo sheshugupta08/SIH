@@ -1,0 +1,173 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for Cards */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Card Title */
+.card h3 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Enhanced shadow effect */
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+}
+
+.card-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.card-image {
+    flex-shrink: 0;
+    width: 480px; /* Adjust width as needed */
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card-image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.card h3 {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.card h3 i {
+    margin-right: 10px;
+    font-size: 24px; /* Adjust icon size as needed */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+
+/* List Styles */
+.card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    padding-left: 15px;
+    position: relative;
+}
+
+/* Adding a bullet point (circle) before list items */
+.card ul li::before {
+    content: '•';
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    font-size: 1.5rem;
+}
+
+/* Footer for Additional Padding */
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+    }
+
+    .card ul li {
+        font-size: 1rem;
+    }
+}
+
+
+

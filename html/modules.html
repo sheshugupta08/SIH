@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeamKarna Educational Modules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .module {
+            border: 2px solid #000;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        /* Monospace font for specific modules */
+        #tenth-class-module, #twelfth-class-module, #graduation-module {
+            font-family: monospace;
+        }
+
+        .module h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .module p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .module button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .module button:hover {
+            background-color: #45a049;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* New styles for "Skills Required" and "Job Opportunities" */
+        .skills, .jobs {
+            font-style: impact;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h2>TEAMKARNA...</h2>
+          <div id="tenth-class-module" class="module">
+        <h2>10th Class Module</h2>
+        <p>This module contains information about various career options after 10th grade.</p>
+        <button id="fashionDesignBtn">Fashion Designing</button>
+        <button id="culinaryArtsBtn">Culinary Arts</button>
+        <button id="hotelManagementBtn">Diploma in Hotel Management</button>
+        <button id="graphicDesignBtn">Graphic Design</button>
+        <button id="nursingBtn">Nursing</button>
+        <button id="teacherTrainingBtn">Teacher Training</button>
+        <button id="journalismBtn">Journalism</button>
+        <button id="engineeringDiplomaBtn">Diploma in Engineering</button>
+    </div>
+
+    <div id="twelfth-class-module" class="module">
+        <h2>12th Class Module</h2>
+        <p>This module provides detailed information about career options after 12th grade.</p>
+        <button id="engineeringBtn">Engineering</button>
+        <button id="medicalBtn">Medical</button>
+        <button id="commerceBtn">Commerce</button>
+        <button id="artsBtn">Arts</button>
+        <button id="designBtn">Design</button>
+        <button id="lawBtn">Law</button>
+    </div>
+
+    <div id="graduation-module" class="module">
+        <h2>Graduation Module</h2>
+        <p>This module contains information about postgraduate studies and career opportunities.</p>
+        <button id="mbaBtn">MBA</button>
+        <button id="mtechBtn">M.Tech</button>
+        <button id="mscBtn">MS.c</button>
+        <button id="maBtn">M.A</button>
+        <button id="law(pg)Btn">Law(PG)</button>
+        <button id="mfaBtn">M.F.A</button>
+    </div>
+
+    <!-- Fashion Designing Modal Structure -->
+    <div id="fashionDesignModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeFashionDesign">&times;</span>
+            <h2>Fashion Designing</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Creativity</p>
+            <p class="skills">Design skills</p>
+            <p class="skills">Understanding of fabrics and materials</p>
+            <p class="skills">Pattern making</p>
+            <p class="skills">Trend analysis</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Fashion Designer</p>
+            <p class="jobs">Fashion Consultant</p>
+            <p class="jobs">Costume Designer</p>
+            <p class="jobs">Textile Designer</p>
+            <p class="jobs">Fashion Merchandiser</p>
+        </div>
+    </div>
+
+    <!-- Culinary Arts Modal Structure -->
+    <div id="culinaryArtsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeCulinaryArts">&times;</span>
+            <h2>Culinary Arts</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Cooking techniques</p>
+            <p class="skills">Kitchen management</p>
+            <p class="skills">Creativity in food presentation</p>
+            <p class="skills">Knowledge of ingredients</p>
+            <p class="skills">Food safety</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Chef</p>
+            <p class="jobs">Pastry Chef</p>
+            <p class="jobs">Culinary Instructor</p>
+            <p class="jobs">Food Critic</p>
+            <p class="jobs">Restaurant Manager</p>
+        </div>
+    </div>
+
+    <!-- Diploma in Hotel Management Modal Structure -->
+    <div id="hotelManagementModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeHotelManagement">&times;</span>
+            <h2>Diploma in Hotel Management</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Customer service</p>
+            <p class="skills">Management skills</p>
+            <p class="skills">Communication skills</p>
+            <p class="skills">Problem-solving skills</p>
+            <p class="skills">Attention to detail</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Hotel Manager</p>
+            <p class="jobs">Front Office Manager</p>
+            <p class="jobs">Event Coordinator</p>
+            <p class="jobs">Food and Beverage Manager</p>
+            <p class="jobs">Guest Relations Manager</p>
+        </div>
+    </div>
+
+    <!-- Graphic Design Modal Structure -->
+    <div id="graphicDesignModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeGraphicDesign">&times;</span>
+            <h2>Graphic Design</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Design software proficiency (e.g., Photoshop, Illustrator)</p>
+            <p class="skills">Creativity</p>
+            <p class="skills">Attention to detail</p>
+            <p class="skills">Typography</p>
+            <p class="skills">Color theory</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Graphic Designer</p>
+            <p class="jobs">UI/UX Designer</p>
+            <p class="jobs">Art Director</p>
+            <p class="jobs">Web Designer</p>
+            <p class="jobs">Brand Identity Designer</p>
+        </div>
+    </div>
+
+    <!-- Nursing Modal Structure -->
+    <div id="nursingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeNursing">&times;</span>
+            <h2>Nursing</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Medical knowledge</p>
+            <p class="skills">Empathy</p>
+            <p class="skills">Attention to detail</p>
+            <p class="skills">Communication skills</p>
+            <p class="skills">Stress management</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Registered Nurse</p>
+            <p class="jobs">Nurse Practitioner</p>
+            <p class="jobs">Clinical Nurse Specialist</p>
+            <p class="jobs">Nurse Educator</p>
+            <p class="jobs">Nurse Manager</p>
+        </div>
+    </div>
+
+    <!-- Teacher Training Modal Structure -->
+    <div id="teacherTrainingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeTeacherTraining">&times;</span>
+            <h2>Teacher Training</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Communication skills</p>
+            <p class="skills">Classroom management</p>
+            <p class="skills">Lesson planning</p>
+            <p class="skills">Patience</p>
+            <p class="skills">Subject expertise</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Classroom Teacher</p>
+            <p class="jobs">Educational Consultant</p>
+            <p class="jobs">Curriculum Developer</p>
+            <p class="jobs">Educational Administrator</p>
+            <p class="jobs">Special Education Teacher</p>
+        </div>
+    </div>
+
+    <!-- Journalism Modal Structure -->
+    <div id="journalismModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeJournalism">&times;</span>
+            <h2>Journalism</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Research skills</p>
+            <p class="skills">Writing and editing</p>
+            <p class="skills">Attention to detail</p>
+            <p class="skills">Interviewing</p>
+            <p class="skills">Ethical reporting</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Journalist</p>
+            <p class="jobs">Reporter</p>
+            <p class="jobs">Editor</p>
+            <p class="jobs">News Anchor</p>
+            <p class="jobs">Investigative Reporter</p>
+        </div>
+    </div>
+
+    <!-- Diploma in Engineering Modal Structure -->
+    <div id="engineeringDiplomaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEngineeringDiploma">&times;</span>
+            <h2>Diploma in Engineering</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Technical knowledge</p>
+            <p class="skills">Problem-solving skills</p>
+            <p class="skills">Mathematical skills</p>
+            <p class="skills">Project management</p>
+            <p class="skills">Analytical skills</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Engineering Technician</p>
+            <p class="jobs">Project Engineer</p>
+            <p class="jobs">Field Engineer</p>
+            <p class="jobs">Design Engineer</p>
+            <p class="jobs">Quality Control Engineer</p>
+        </div>
+    </div>
+
+    <!-- Engineering Modal Structure -->
+    <div id="engineeringModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEngineering">&times;</span>
+            <h2>Engineering</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Technical skills</p>
+            <p class="skills">Mathematical skills</p>
+            <p class="skills">Problem-solving skills</p>
+            <p class="skills">Analytical skills</p>
+            <p class="skills">Project management</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Civil Engineer</p>
+            <p class="jobs">Mechanical Engineer</p>
+            <p class="jobs">Electrical Engineer</p>
+            <p class="jobs">Software Engineer</p>
+            <p class="jobs">Engineering Manager</p>
+        </div>
+    </div>
+
+    <!-- Medical Modal Structure -->
+    <div id="medicalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeMedical">&times;</span>
+            <h2>Medical</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Medical knowledge</p>
+            <p class="skills">Communication skills</p>
+            <p class="skills">Attention to detail</p>
+            <p class="skills">Empathy</p>
+            <p class="skills">Problem-solving skills</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Doctor</p>
+            <p class="jobs">Surgeon</p>
+            <p class="jobs">Nurse</p>
+            <p class="jobs">Medical Researcher</p>
+            <p class="jobs">Healthcare Administrator</p>
+        </div>
+    </div>
+
+    <!-- Commerce Modal Structure -->
+    <div id="commerceModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeCommerce">&times;</span>
+            <h2>Commerce</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Accounting knowledge</p>
+            <p class="skills">Analytical skills</p>
+            <p class="skills">Business acumen</p>
+            <p class="skills">Financial management</p>
+            <p class="skills">Communication skills</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Accountant</p>
+            <p class="jobs">Financial Analyst</p>
+            <p class="jobs">Business Consultant</p>
+            <p class="jobs">Marketing Manager</p>
+            <p class="jobs">Sales Manager</p>
+        </div>
+    </div>
+
+    <!-- Arts Modal Structure -->
+    <div id="artsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeArts">&times;</span>
+            <h2>Arts</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Creativity</p>
+            <p class="skills">Artistic skills</p>
+            <p class="skills">Attention to detail</p>
+            <p class="skills">Cultural knowledge</p>
+            <p class="skills">Critical thinking</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Artist</p>
+            <p class="jobs">Art Director</p>
+            <p class="jobs">Curator</p>
+            <p class="jobs">Art Educator</p>
+            <p class="jobs">Gallery Manager</p>
+        </div>
+    </div>
+
+    <!-- Design Modal Structure -->
+    <div id="designModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeDesign">&times;</span>
+            <h2>Design</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Creativity</p>
+            <p class="skills">Design software proficiency</p>
+            <p class="skills">Attention to detail</p>
+            <p class="skills">Problem-solving skills</p>
+            <p class="skills">Project management</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Graphic Designer</p>
+            <p class="jobs">UI/UX Designer</p>
+            <p class="jobs">Fashion Designer</p>
+            <p class="jobs">Interior Designer</p>
+            <p class="jobs">Product Designer</p>
+        </div>
+    </div>
+
+    <!-- Law Modal Structure -->
+    <div id="lawModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLaw">&times;</span>
+            <h2>Law</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Legal knowledge</p>
+            <p class="skills">Research skills</p>
+            <p class="skills">Analytical skills</p>
+            <p class="skills">Communication skills</p>
+            <p class="skills">Attention to detail</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Lawyer</p>
+            <p class="jobs">Legal Advisor</p>
+            <p class="jobs">Judge</p>
+            <p class="jobs">Legal Consultant</p>
+            <p class="jobs">Paralegal</p>
+        </div>
+    </div>
+
+    <!-- MBA Modal Structure -->
+    <div id="mbaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeMBA">&times;</span>
+            <h2>MBA</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Leadership skills</p>
+            <p class="skills">Analytical thinking</p>
+            <p class="skills">Strategic planning</p>
+            <p class="skills">Communication skills</p>
+            <p class="skills">Financial acumen</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Business Manager</p>
+            <p class="jobs">Consultant</p>
+            <p class="jobs">Marketing Manager</p>
+            <p class="jobs">Financial Analyst</p>
+            <p class="jobs">Entrepreneur</p>
+        </div>
+    </div>
+
+    <!-- M.Tech Modal Structure -->
+    <div id="mtechModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeMTech">&times;</span>
+            <h2>M.Tech</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Advanced technical knowledge</p>
+            <p class="skills">Research skills</p>
+            <p class="skills">Problem-solving skills</p>
+            <p class="skills">Analytical skills</p>
+            <p class="skills">Project management</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Technical Specialist</p>
+            <p class="jobs">Software Developer</p>
+            <p class="jobs">Systems Engineer</p>
+            <p class="jobs">Research Scientist</p>
+            <p class="jobs">Technical Manager</p>
+        </div>
+    </div>
+    <!-- M.Sc Modal Structure -->
+    <div id="mscModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeMSc">&times;</span>
+            <h2>M.Sc</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Strong foundation in Science</p>
+            <p class="skills">Analytical Skills</p>
+            <p class="skills">Research skills</p>
+            <p class="skills">Data Analysis</p>
+            <p class="skills">Problem Solving</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Research Scientist</p>
+            <p class="jobs">Lab Technician</p>
+            <p class="jobs">Academic Lecturer</p>
+            <p class="jobs">Data Analyst</p>
+            <p class="jobs"></p>
+        </div>
+    </div>
+    <!-- M.A Modal Structure -->
+     <div id="maModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeMA">&times;</span>
+            <h2>M.A</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Strong knowledge in the chosen field</p>
+            <p class="skills">Research skills</p>
+            <p class="skills">Analytical thinking</p>
+            <p class="skills">Communication skills</p>
+            <p class="skills">Critical thinking</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Academic Lecturer</p>
+            <p class="jobs">Content Writer</p>
+            <p class="jobs">Research Analyst</p>
+            <p class="jobs">Public Relations Specialist</p>
+            <p class="jobs">Consultant</p>
+        </div>
+    </div>
+    <!-- Law(PG) Modal Structure -->
+    <div id="law(pg)Modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLaw(PG)">&times;</span>
+            <h2>Law(PG)</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Advanced legal knowledge</p>
+            <p class="skills">Research skills</p>
+            <p class="skills">Strong communication skills</p>
+            <p class="skills">Analytical skills</p>
+            <p class="skills">Understanding of legal procrdures</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Lawyer</p>
+            <p class="jobs">Legal Consultant</p>
+            <p class="jobs">Judicial Officer</p>
+            <p class="jobs">Legal Advisor</p>
+            <p class="jobs">Corporate Lawyer</p>
+        </div>
+    </div>
+    <!-- M.F.A Modal Structure -->
+    <div id="mfaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeMFA">&times;</span>
+            <h2>M.F.A</h2>
+            <p class="skills"><strong>Skills Required:</strong></p>
+            <p class="skills">Artistic skills</p>
+            <p class="skills">Creativity</p>
+            <p class="skills">Technical skills related to media</p>
+            <p class="skills">Project management</p>
+            <p class="skills">Communication skills</p>
+               
+            <p class="jobs"><strong>Job Opportunities:</strong></p>
+            <p class="jobs">Fine Artist</p>
+            <p class="jobs">Art Director</p>
+            <p class="jobs">Gallery Curator</p>
+            <p class="jobs">Art Educator</p>
+            <p class="jobs">Art Consultant</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('fashionDesignBtn').onclick = function() {
+            document.getElementById('fashionDesignModal').style.display = 'block';
+        };
+        document.getElementById('closeFashionDesign').onclick = function() {
+            document.getElementById('fashionDesignModal').style.display = 'none';
+        };
+
+        document.getElementById('culinaryArtsBtn').onclick = function() {
+            document.getElementById('culinaryArtsModal').style.display = 'block';
+        };
+        document.getElementById('closeCulinaryArts').onclick = function() {
+            document.getElementById('culinaryArtsModal').style.display = 'none';
+        };
+
+        document.getElementById('hotelManagementBtn').onclick = function() {
+            document.getElementById('hotelManagementModal').style.display = 'block';
+        };
+        document.getElementById('closeHotelManagement').onclick = function() {
+            document.getElementById('hotelManagementModal').style.display = 'none';
+        };
+
+        document.getElementById('graphicDesignBtn').onclick = function() {
+            document.getElementById('graphicDesignModal').style.display = 'block';
+        };
+        document.getElementById('closeGraphicDesign').onclick = function() {
+            document.getElementById('graphicDesignModal').style.display = 'none';
+        };
+
+        document.getElementById('nursingBtn').onclick = function() {
+            document.getElementById('nursingModal').style.display = 'block';
+        };
+        document.getElementById('closeNursing').onclick = function() {
+            document.getElementById('nursingModal').style.display = 'none';
+        };
+
+        document.getElementById('teacherTrainingBtn').onclick = function() {
+            document.getElementById('teacherTrainingModal').style.display = 'block';
+        };
+        document.getElementById('closeTeacherTraining').onclick = function() {
+            document.getElementById('teacherTrainingModal').style.display = 'none';
+        };
+
+        document.getElementById('journalismBtn').onclick = function() {
+            document.getElementById('journalismModal').style.display = 'block';
+        };
+        document.getElementById('closeJournalism').onclick = function() {
+            document.getElementById('journalismModal').style.display = 'none';
+        };
+
+        document.getElementById('engineeringDiplomaBtn').onclick = function() {
+            document.getElementById('engineeringDiplomaModal').style.display = 'block';
+        };
+        document.getElementById('closeEngineeringDiploma').onclick = function() {
+            document.getElementById('engineeringDiplomaModal').style.display = 'none';
+        };
+
+        document.getElementById('engineeringBtn').onclick = function() {
+            document.getElementById('engineeringModal').style.display = 'block';
+        };
+        document.getElementById('closeEngineering').onclick = function() {
+            document.getElementById('engineeringModal').style.display = 'none';
+        };
+
+        document.getElementById('medicalBtn').onclick = function() {
+            document.getElementById('medicalModal').style.display = 'block';
+        };
+        document.getElementById('closeMedical').onclick = function() {
+            document.getElementById('medicalModal').style.display = 'none';
+        };
+
+        document.getElementById('commerceBtn').onclick = function() {
+            document.getElementById('commerceModal').style.display = 'block';
+        };
+        document.getElementById('closeCommerce').onclick = function() {
+            document.getElementById('commerceModal').style.display = 'none';
+        };
+
+        document.getElementById('artsBtn').onclick = function() {
+            document.getElementById('artsModal').style.display = 'block';
+        };
+        document.getElementById('closeArts').onclick = function() {
+            document.getElementById('artsModal').style.display = 'none';
+        };
+
+        document.getElementById('designBtn').onclick = function() {
+            document.getElementById('designModal').style.display = 'block';
+        };
+        document.getElementById('closeDesign').onclick = function() {
+            document.getElementById('designModal').style.display = 'none';
+        };
+
+        document.getElementById('lawBtn').onclick = function() {
+            document.getElementById('lawModal').style.display = 'block';
+        };
+        document.getElementById('closeLaw').onclick = function() {
+            document.getElementById('lawModal').style.display = 'none';
+        };
+
+        document.getElementById('mbaBtn').onclick = function() {
+            document.getElementById('mbaModal').style.display = 'block';
+        };
+        document.getElementById('closeMBA').onclick = function() {
+            document.getElementById('mbaModal').style.display = 'none';
+        };
+
+        document.getElementById('mtechBtn').onclick = function() {
+            document.getElementById('mtechModal').style.display = 'block';
+        };
+        document.getElementById('closeMTech').onclick = function() {
+            document.getElementById('mtechModal').style.display = 'none';
+        };
+
+        document.getElementById('mscBtn').onclick = function() {
+            document.getElementById('mscModal').style.display = 'block';
+        };
+        document.getElementById('closeMSc').onclick = function() {
+            document.getElementById('mscModal').style.display = 'none';
+        };
+
+        document.getElementById('maBtn').onclick = function() {
+            document.getElementById('maModal').style.display = 'block';
+        };
+        document.getElementById('closeMA').onclick = function() {
+            document.getElementById('maModal').style.display = 'none';
+        };
+
+        document.getElementById('law(pg)Btn').onclick = function() {
+            document.getElementById('law(pg)Modal').style.display = 'block';
+        };
+        document.getElementById('closeLaw(PG)').onclick = function() {
+            document.getElementById('law(pg)Modal').style.display = 'none';
+        };
+
+        document.getElementById('mfaBtn').onclick = function() {
+            document.getElementById('mfaModal').style.display = 'block';
+        };
+        document.getElementById('closeMFA').onclick = function() {
+            document.getElementById('mfaModal').style.display = 'none';
+        };
+    </script>
+</body>
+</html>
